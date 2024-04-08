@@ -13,7 +13,7 @@ setup(name='itstool',
       author='Shaun McCance',
       author_email='shaunm@gnome.org',
       url='http://itstool.org/',
-      scripts=['itstool'],
+      entry_points={'console_scripts': ['itstool = itstool:main']},
       data_files=[('@DATADIR@/itstool/its', [
           'its/docbook.its',
           'its/docbook5.its',
