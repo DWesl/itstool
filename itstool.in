@@ -1495,8 +1495,8 @@ def convert_locale (locale):
     return ret
 
 
-#def main():
-if __name__ == '__main__':
+#if __name__ == '__main__':
+def main():
     options = optparse.OptionParser()
     options.set_usage('\n  itstool [OPTIONS] [XMLFILES]\n' +
                       '  itstool -m <MOFILE> [OPTIONS] [XMLFILES]\n' +
@@ -1683,9 +1683,9 @@ if __name__ == '__main__':
         out.write(serialized)
         out.flush()
 
-#if __name__ == '__main__':
-#    if os.getenv('ITSTOOL_PROFILE') is not None:
-#        import cProfile
-#        cProfile.run('main()')
-#    else:
-#        main()
+if __name__ == '__main__':
+    if os.getenv('ITSTOOL_PROFILE') is not None:
+        import cProfile
+        cProfile.run('main()')
+    else:
+        main()
